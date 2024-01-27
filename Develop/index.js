@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+// Included packages needed for this application
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 const fs = require('fs');
@@ -6,11 +6,7 @@ const fs = require('fs');
 
 
 
-
-
-
-
-// TODO: Create an array of questions for user input
+// Array of questions for user input for the README file
 const questions = [
     {
         type: 'input',
@@ -51,14 +47,8 @@ const questions = [
     
 
     {
-        type: 'input',
-        name: 'screenshot',
-        message: 'Please add a screenshot. You can use the following Markdown syntax:\n![alt text](assets/img/screenshot.png)\nMake sure to replace "alt text" with a brief description of the screenshot.',
-    },
-
-    {
         type: 'checkbox',
-        name: 'built with',
+        name: 'techstack',
         message: 'Please select the tech stack you used for this application',
         choices: ['HTML', 'JavaScript', 'CSS', 'JSON', 'TailwindCSS', 'React', 'Node.js', 'Express.js', 'MongoDB', 'MySQL', 'Python', 'Django', 'Jest', 'Angular', 'Bootstrap']
     },
@@ -79,18 +69,18 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: 'Select the license most appropriate for this application',
-        choices: ['MIT License', 'GNU General Public License (GPL)', 'Apache License 2.0', 'BSD 3-Clause License (New BSD License)', 'Creatve Commons Attribution 4.0 International License', 'Mozilla Public License', 'Eclipse Public License', 'ISC Public License', 'Bozo License']
+        choices: ['MIT', 'GPL', 'Apache 2.0', 'Mozilla',]
     },
 
     {
         type: 'input',
         name: 'features',
-        message: 'What are potential features for this application? , Include possible functionality that you would like to add',
+        message: 'What are potential features for this application? , Include possible functionality that you would like to add (NOTE: use commas between features to format a list)',
     },
 
     {
         type: 'input',
-        name: 'contributing',
+        name: 'contributions',
         message: 'How can the community contribute to this application? (Tip: You may want to mention forking)',
     },
 
@@ -112,36 +102,17 @@ const questions = [
         message: 'Enter your email address',
     },
       
+    {
+        type: 'input',
+        name: 'acknowledgement',
+        message: 'Include any acknowledgements, credits or any third-party contributers or external code sources ',
+    },
+      
 ];
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// TODO: Create a function to write README file
 // Function to write generated README file, and logs success message.
 function writeToFile(fileName, data) {
 
@@ -153,7 +124,7 @@ function writeToFile(fileName, data) {
 }
 
 
-// TODO: Create a function to initialize app
+
 // Function to promot the user questions and organizes the README content and calls writeToFile function to generate file
 function init() {
 
