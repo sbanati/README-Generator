@@ -112,7 +112,6 @@ const questions = [
 
 
 
-
 // Function to write generated README file, and logs success message.
 function writeToFile(fileName, data) {
 
