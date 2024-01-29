@@ -1,5 +1,4 @@
-//function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string. Used switch statement to handle if else block
+//function that returns a license badge based on which value is passed, used switch statement to handle this case
 function renderLicenseBadge(license) {
  
   let badge = ``
@@ -33,8 +32,7 @@ function renderLicenseBadge(license) {
 
 
 
-// Create a function that returns the license link
-// If there is no license, return an empty string
+// Create a function that returns the license link, if none is selected , return empty string
 function renderLicenseLink(license) {
 
   let licenselink = '';
@@ -78,10 +76,6 @@ function renderLicenseSection(license) {
   This project is covered under the [${license} License](${renderLicenseLink(license)}).`
 
 }
-
-// if license is 'none' then section is not rendered so we also need to render the section in Table of Contents if value exists.
- 
-
 
 
 
