@@ -8,7 +8,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/sbanati/README-Generator">  
+  <a href="https://github.com/sbanati/README-Wizard">  
     <img src="assets/img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -17,7 +17,7 @@
   <p align="center">
     The only README generator you will ever need for any and all of your projects. 
     <br />
-    <a href="https://github.com/sbanati/README-Generator"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/sbanati/README-Wizard"><strong>Explore the docs »</strong></a>
     <br />
     <br />
 
@@ -86,7 +86,7 @@ I was told that the command-line application must dynamically create a README ba
 ## Getting Started
 
  <h3>For end users</h3> 
-https://github.com/sbanati/README-Generator  <br>
+https://github.com/sbanati/README-Wizard  <br>
 
 
 
@@ -96,7 +96,7 @@ For anyone wanting to contribute <br>
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/sbanati/README-Generator
+   git clone https://github.com/sbanati/README-Wizard
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -171,7 +171,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 Twitter and email - [@twitter_TherealSLVR](https://twitter.com/TherealSLVR) - smbanati@gmail.com
 
-Project Link: https://github.com/sbanati/README-Generator
+Project Link: https://github.com/sbanati/README-Wizard
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
