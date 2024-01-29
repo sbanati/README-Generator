@@ -66,10 +66,10 @@ const questions = [
     },
 
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Select the license most appropriate for this application',
-        choices: ['MIT', 'GPL', 'Apache 2.0', 'Mozilla',]
+        choices: ['MIT', 'GPL', 'Apache 2.0', 'Mozilla', 'None',]
     },
 
     {

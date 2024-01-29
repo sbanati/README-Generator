@@ -2,33 +2,33 @@
 // If there is no license, return an empty string. Used switch statement to handle if else block
 function renderLicenseBadge(license) {
  
-  let url = ``
+  let badge = ``
   switch(license){
     
     case 'MIT':
-      url = `![licenseShield](https://img.shields.io/badge/license-MIT-yellow)`
+      badge = `![licenseShield](https://img.shields.io/badge/license-MIT-yellow)`
     break;
     
     case 'GPL':
-      url = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+      badge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
     break;
 
     case 'Apache 2.0':
-      url = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+      badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
     break;
 
     case 'Mozilla':
-      url = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+      badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
     break;
 
     // Incase the license is not recognized 
     default:
-      url = '';
+      badge = '';
 
     
   }
   
-  return url;
+  return badge;
 }
 
 
@@ -37,32 +37,32 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
 
-  let url = '';
+  let licenselink = '';
   
   switch (license) {
     
     case 'MIT':
-      url = 'https://opensource.org/licenses/MIT';
+      licenselink = 'https://opensource.org/licenses/MIT';
     break;
 
     case 'GPL':
-      url = 'https://www.gnu.org/licenses/gpl-3.0';
+      licenselink = 'https://www.gnu.org/licenses/gpl-3.0';
     break;
 
     case 'Apache 2.0':
-      url = 'https://opensource.org/licenses/Apache-2.0';
+      licenselink = 'https://opensource.org/licenses/Apache-2.0';
     break;
 
     case 'Mozilla':
-      url = 'https://opensource.org/licenses/MPL-2.0';
+      licenselink = 'https://opensource.org/licenses/MPL-2.0';
     break;
 
     //Incase the License is not recognized 
     default:
-    url = '';
+      licenselink = '';
   
   }
-  return url;
+  return licenselink;
 
 }
 
@@ -74,18 +74,15 @@ function renderLicenseSection(license) {
   if(license === 'None'){
     return ``;
   }
-  return `## License 
+  return `
   This project is covered under the [${license} License](${renderLicenseLink(license)}).`
 
 }
 
-function renderLicenseToC(license) {
-  
-  if(license === 'None'){
-    return ``;
-  }
-  return `* [License](#license)`
-}
+// if license is 'none' then section is not rendered so we also need to render the section in Table of Contents if value exists.
+ 
+
+
 
 
 
@@ -115,7 +112,8 @@ function generateMarkdown(data) {
   * [Additions](#additions)
   * [Contributions](#contributions)
   * [Acknowledgements](#acknowledgements)
-   ${renderLicenseToC(data.license)}
+  * [Test](#test)
+  * [License](#license)
   * [Contact](#contact)
 
 ## Description
@@ -137,12 +135,12 @@ function generateMarkdown(data) {
 
 ## Usage
 
-  ${data.screenshot}
+  
   ${data.usage}
 
 ## Additions
 
-  ${features}
+  ${features} 
 
 ## Contributions
 
@@ -153,11 +151,16 @@ function generateMarkdown(data) {
   ${data.contributions}
 
 ## Acknowledgements
-
+   
   ${acknowledgement}
 
-## License
-  ${data.License}
+## Test
+
+  ${data.test}
+
+## License  
+
+${renderLicenseSection(data.license)}
 
 ## Contact 
   
